@@ -34,3 +34,15 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.project-tags { margin: 0.5rem 0; }
+.tag {
+    display: inline-block;
+    background: #21262d;
+    color: #c9d1d9;
+    border-radius: 20px;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    margin-right: 0.4rem;
+    border: 1px solid #30363d;
+}
+.project-links { margin-top: 0.8rem; }
