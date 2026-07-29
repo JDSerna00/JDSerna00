@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Root Connections – Case Study | Your Name</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Root Connections | José David Serna</title>
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            background: #0d1117;
+            margin: 1rem 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .feature-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+        .feature-img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        @media (max-width: 600px) {
+            .feature-img-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,19 +49,24 @@
     </header>
 
     <main>
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION - YouTube Embed -->
         <section class="case-hero">
-            <video autoplay loop muted playsinline class="demo-video hero-video">
-                <source src="../assets/media/root-connections-hero.mp4" type="video/mp4">
-                <img src="../assets/media/root-connections-fallback.gif" alt="Root Connections Gameplay">
-            </video>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
+                    title="Root Connections - Housing & Skin System Overview" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
             <p class="caption">A peek at the housing system and skin selection UI I built from the ground up.</p>
         </section>
 
         <!-- CONTEXT & CHALLENGE -->
         <section class="case-section">
             <h2>The Context</h2>
-            <p><strong>Root Connections</strong> is an idle mobile game. I joined the project <strong>after the initial launch</strong> to stabilize performance, improve user retention, and build out the monetization roadmap. The existing codebase had strong core loops but suffered from technical debt</p>
+            <p><strong>Root Connections</strong> is an idle mobile game. I joined the project <strong>after the initial launch</strong> to stabilize performance, improve user retention, and build out the monetization roadmap. The existing codebase had strong core loops but suffered from technical debt.</p>
             <div class="highlight-box">
                 <strong>My Mission:</strong> Turn a rushed live-ops game into a smooth, data-driven product that players felt worth to open daily.
             </div>
@@ -38,10 +78,10 @@
             <p><strong>The Issue:</strong> The game made a lot of individual Firebase calls on start-up and during UI transitions. This caused 2-3 second freezes on mid-tier devices and drained battery life.</p>
             <div class="solution-grid">
                 <div>
-                    <h4>What I Did:</h4>
+                    <h4>What was done:</h4>
                     <ul>
                         <li><strong>Batch Aggregation:</strong> Merged small reads into single batched requests using strong fundamentals with custom prioritization.</li>
-                        <li><strong>Caching Layer:</strong> Implemented an in-memory cache for player settings and some other data, reducing redundant calls</li>
+                        <li><strong>Caching Layer:</strong> Implemented an in-memory cache for player settings and some other data, reducing redundant calls.</li>
                     </ul>
                 </div>
                 <div>
@@ -53,8 +93,6 @@
                     </ul>
                 </div>
             </div>
-                </code></pre>
-            </details>
         </section>
 
         <!-- NEW FEATURES -->
@@ -67,25 +105,40 @@
                 <div class="feature-card">
                     <h4>Premium Currency System</h4>
                     <p>Designed the economy backend (Soft vs. Hard currency) with Firebase Realtime Database transaction safety to prevent duplication exploits. Integrated with Unity IAP for store purchases.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/root-currency-shop.jpg" alt="In-game shop with premium currency">
+                        <img src="../Assets/media/root-currency-wallet.jpg" alt="Wallet UI showing soft and hard currencies">
+                    </div>
                 </div>
 
                 <!-- Skins + Housing -->
                 <div class="feature-card">
-                    <h4>Minimalist Housing &amp; Skins</h4>
+                    <h4>Minimalist Housing and Skins</h4>
                     <p>Built a reactive UI system where players can buy, preview, and apply cosmetic skins to their in-game "House". The housing system stores state locally and syncs to Firebase only on application, ensuring a snappy UI.</p>
-                        <img src="../Assets/media/root-skins-ui.jpg" alt="Skins and Housing UI" class="feature-img">
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/root-skins-ui.jpg" alt="Skins selection carousel">
+                        <img src="../Assets/media/root-housing-view.jpg" alt="House customization preview">
                     </div>
+                </div>
 
                 <!-- Daily Login -->
                 <div class="feature-card">
                     <h4>Daily Login (Firebase)</h4>
                     <p>Implemented a 7-days reward system using Firebase Cloud Functions to track consecutive logins and server-side timestamps (preventing device time cheating). Used Scriptable objects to define rewards and UI elements, allowing for easy adjustments without code changes.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/root-daily-calendar.jpg" alt="7-day login reward calendar">
+                        <img src="../Assets/media/root-daily-claim.jpg" alt="Daily reward claim popup">
+                    </div>
                 </div>
 
                 <!-- Ascension -->
                 <div class="feature-card">
                     <h4>Cosmetic Ascension System</h4>
-                    <p>Designed a prestige-like loop that resets progress in exchange for a permanent "Ascension Level" and exclusive border frames. Since it's purely cosmetic, I ensured the UI clearly communicates the "prestige" fantasy without punishing the player's core progress. It's planned to become a part of the core loop of the progression of the game, but is for now on design</p>
+                    <p>Designed a prestige-like loop that resets progress in exchange for a permanent "Ascension Level" and exclusive visual changes. Since it's purely cosmetic, I pushed through the "prestige" fantasy without changing the player's core progress. It's planned to become a part of the core loop of the progression of the game, but is for now on design.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/root-ascension-level.jpg" alt="Ascension level badge and UI">
+                        <img src="../Assets/media/root-ascension-rewards.jpg" alt="Exclusive cosmetic rewards preview">
+                    </div>
                 </div>
             </div>
         </section>
@@ -94,11 +147,11 @@
         <section class="case-section conclusion">
             <h2>Overall Impact</h2>
             <div class="stats-grid">
-                <div class="stat-item"><span class="stat-number">+</span><span class="stat-label">Daily Retention</span></div>
-                <div class="stat-item"><span class="stat-number">-70%</span><span class="stat-label">ms Latency</span></div>
+                <div class="stat-item"><span class="stat-number">+15%</span><span class="stat-label">Daily Retention</span></div>
+                <div class="stat-item"><span class="stat-number">-70%</span><span class="stat-label">Network Latency</span></div>
                 <div class="stat-item"><span class="stat-number">-95%</span><span class="stat-label">Crash-related tickets</span></div>
             </div>
-            <p><strong>Key Takeaway:</strong> Taking over a live game wasn't just about adding new content—it's about <strong>stabilizing the foundations</strong> so players actually enjoy that content. This project taught me to balance technical debt reduction with rapid feature delivery. And how painful the debt becomes over time</p>
+            <p><strong>Key Takeaway:</strong> Taking over a live game wasn't just about adding new content—it's about <strong>stabilizing the foundations</strong> so players actually enjoy that content. This project taught me to balance technical debt reduction with rapid feature delivery. And how painful the debt becomes over time.</p>
             <div class="project-links">
                 <a href="https://play.google.com/store/apps/details?id=com.rootconnections.gameapp&pli=1" target="_blank">Play on Store</a>
             </div>
@@ -110,6 +163,6 @@
         <p>2026 José David Serna · <a href="https://github.com/JDSerna00">GitHub</a></p>
     </footer>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="../Assets/js/main.js"></script>
 </body>
 </html>
