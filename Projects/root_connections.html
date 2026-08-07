@@ -6,23 +6,6 @@
     <title>Root Connections | José David Serna</title>
     <link rel="stylesheet" href="../Assets/css/style.css">
     <style>
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            background: #0d1117;
-            margin: 1rem 0;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
         .feature-img-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -45,21 +28,23 @@
     <header>
         <h1>Root Connections</h1>
         <p class="subtitle">Idle Game · Post-Launch Lead · Unity + Firebase</p>
-        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+        <a href="../index.html" class="btn btn-back">&larr; Back to Portfolio</a>
     </header>
 
     <main>
-        <!-- HERO SECTION - YouTube Embed -->
+        <!-- HERO SECTION -->
         <section class="case-hero">
-            <div class="video-container">
-                <iframe 
-                    src="https://youtube.com/shorts/XMoHGQQp2Ag?feature=share" 
-                    title="Root Connections - Housing & Skin System Overview" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                class="demo-video hero-video"
+                poster="../Assets/media/root-hero-poster.jpg">
+                <source src="../Assets/media/root-connections-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag. 
+                <a href="../Assets/media/root-connections-hero.mp4">Download the video</a> to view it.
+            </video>
             <p class="caption">A peek at the housing system and skin selection UI I built from the ground up.</p>
         </section>
 
@@ -170,7 +155,7 @@
             </div>
             <p><strong>Key Takeaway:</strong> Taking over a live game wasn't just about adding new content—it's about <strong>stabilizing the foundations</strong> so players actually enjoy that content. This project taught me to balance technical debt reduction with rapid feature delivery. And how painful the debt becomes over time.</p>
             <div class="project-links">
-                <a href="https://play.google.com/store/apps/details?id=com.rootconnections.gameapp&pli=1" target="_blank">Play on Store</a>
+               <a href="https://play.google.com/store/apps/details?id=com.rootconnections.gameapp&pli=1" target="_blank" class="btn btn-primary">Play on Store</a>
             </div>
         </section>
 

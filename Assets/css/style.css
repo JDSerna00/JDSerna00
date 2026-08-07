@@ -86,3 +86,50 @@ code { font-family: 'Courier New', monospace; color: #f0883e; }
     .feature-grid { grid-template-columns: 1fr; }
     .stats-grid { flex-direction: column; gap: 1rem; }
 }
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-back {
+    background: #21262d;
+    border-color: #30363d;
+    color: #c9d1d9;
+}
+.btn-back:hover {
+    background: #30363d;
+    border-color: #484f58;
+    color: #f0f6fc;
+}
+
+.btn-primary {
+    background: #238636;
+    border-color: #2ea043;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background: #2ea043;
+    border-color: #3fb950;
+    color: #ffffff;
+}
+
+/* Ensure proper spacing for the back button in the header */
+header .btn-back {
+    margin-top: 0.5rem;
+}
+
+/* Project links container (store button) */
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
