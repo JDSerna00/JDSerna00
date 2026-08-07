@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Projects | José David Serna</title>
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .project-snippet {
+            background: #161b22;
+            border-radius: 16px;
+            border: 1px solid #30363d;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+        .project-snippet:hover {
+            border-color: #58a6ff;
+        }
+        .project-snippet img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #30363d;
+        }
+        .project-snippet-content {
+            padding: 1.2rem;
+        }
+        .project-snippet-content h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .project-snippet-content p {
+            margin: 0 0 0.8rem 0;
+            font-size: 0.95rem;
+            color: #8b949e;
+            line-height: 1.5;
+        }
+        .project-snippet-content .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.8rem;
+        }
+        .project-snippet-content .tag {
+            display: inline-block;
+            background: #21262d;
+            color: #c9d1d9;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            border: 1px solid #30363d;
+        }
+        .project-snippet-content .snippet-link {
+            display: inline-block;
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .project-snippet-content .snippet-link:hover {
+            text-decoration: underline;
+        }
+        .page-subtitle {
+            color: #8b949e;
+            margin-top: -0.5rem;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        @media (max-width: 700px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-snippet img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="section-header">
+            <div>
+                <h1>Other Projects</h1>
+                <p class="page-subtitle">A selection of games, tools, and prototypes</p>
+            </div>
+            <a href="../index.html" class="btn btn-back">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-snippet">
+                <img src="../Assets/media/project-thumb-1.jpg" alt="Project name screenshot">
+                <div class="project-snippet-content">
+                    <h3>Data Visualization</h3>
+                    <p>These were some fun projects for a college assignment, exploring different ways to represent data visually using Unity.</p>
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Shader Graph</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-snippet">
+                <img src="../Assets/media/project-thumb-2.jpg" alt="Project name screenshot">
+                <div class="project-snippet-content">
+                    <h3>Visual Effects</h3>
+                    <p>These were some experiments with visual effects in Unity, focusing on particle systems and shaders.</p>
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Shader Graph</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-snippet">
+                <img src="../Assets/media/project-thumb-3.jpg" alt="Project name screenshot">
+                <div class="project-snippet-content">
+                    <h3>UX/UI Design</h3>
+                    <p>These were some experiments with UX/UI design in Figma, using design systems to recreate interfaces as in corporate applications.</p>
+                    <div class="tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                    <a href="#" class="snippet-link">Read more →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>2026 José David Serna · <a href="https://github.com/JDSerna00">GitHub</a></p>
+    </footer>
+
+    <script src="../Assets/js/main.js"></script>
+</body>
+</html>
