@@ -121,15 +121,36 @@ code { font-family: 'Courier New', monospace; color: #f0883e; }
     color: #ffffff;
 }
 
-/* Ensure proper spacing for the back button in the header */
 header .btn-back {
     margin-top: 0.5rem;
 }
 
-/* Project links container (store button) */
 .project-links {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+}
+* {
+  cursor: none;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ffffff; 
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none; 
+  z-index: 9999;
+  transform: translate(-50%, -50%); 
+  transition: width 0.15s, height 0.15s, background 0.15s; 
+}
+
+a:hover ~ #custom-cursor, 
+button:hover ~ #custom-cursor,
+.project-card:hover ~ #custom-cursor {
 }
