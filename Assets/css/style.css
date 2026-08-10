@@ -132,7 +132,7 @@ header .btn-back {
     flex-wrap: wrap;
 }
 * {
-  cursor: none;
+  cursor: none !important;
 }
 
 #custom-cursor {
@@ -141,16 +141,39 @@ header .btn-back {
   left: 0;
   width: 24px;
   height: 24px;
-  border: 2px solid #ffffff; 
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  pointer-events: none; 
+  pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%); 
-  transition: width 0.15s, height 0.15s, background 0.15s; 
+  transform: translate(-50%, -50%);
+  
+  /* --- Sniper Ring --- */
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: transparent;
+  
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-a:hover ~ #custom-cursor, 
-button:hover ~ #custom-cursor,
-.project-card:hover ~ #custom-cursor {
+#custom-cursor::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 3px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 59, 59, 0.6);
+}
+
+@media (pointer: coarse) {
+  #custom-cursor {
+    display: none !important;
+  }
+  * {
+    cursor: auto !important; /* Restore default cursor for touch users */
+  }
 }
