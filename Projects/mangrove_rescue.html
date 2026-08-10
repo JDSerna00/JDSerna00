@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangrove Rescue | José David Serna</title>
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <style>
+        .feature-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+        .feature-img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        @media (max-width: 600px) {
+            .feature-img-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mangrove Rescue</h1>
+        <p class="subtitle">Educational 2D Game · PC · Unity + Fungus</p>
+        <a href="../index.html" class="btn btn-back">← Back to Portfolio</a>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - Native Video Element -->
+        <section class="case-hero">
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                class="demo-video hero-video"
+                poster="../Assets/media/mangrove-hero-poster.jpg">
+                <source src="../Assets/media/mangrove-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag. 
+                <a href="../Assets/media/mangrove-hero.mp4">Download the video</a> to view it.
+            </video>
+            <p class="caption">Gameplay overview showing the minimap, dialogue system, and the hot‑or‑cold thermometer.</p>
+        </section>
+
+        <!-- CONTEXT & CHALLENGE -->
+        <section class="case-section">
+            <h2>The Context</h2>
+            <p><strong>Mangrove Rescue</strong> is an educational 2D game designed for PC, aimed at teaching little kids about mangrove ecosystems and wildlife conservation. The player explored some mangrove forest map, interacts with animal characters, and rescues them using clues and environmental feedback.</p>
+            <p>I joined the project as the lead programmer and contributed to multiple systems, from animation and visual effects to core interaction mechanics. The game was built with Unity and used the Fungus dialogue system for narrative branching. Tho i spend a very large part of my time in the project coordinating with a fractured design team</p>
+            <div class="highlight-box">
+                <strong>My Doings:</strong> Implementing smooth animations, a functional minimap, interactive dialogues, and a unique thermometer‑based search mechanic to create an engaging educational experience.
+                <strong>Learnings:</strong> Combining educational content with interactive gameplay was a hard challenge, the team was quite large mainly based on artists so there was a lot of back and forth to make sure the mechanics matched the visual and narrative vision within a very limited time. 
+
+            </div>
+        </section>
+
+        <!-- KEY FEATURES -->
+        <section class="case-section">
+            <h2>Key Features I Implemented</h2>
+            <p>Below are the primary systems I designed and coded for the project.</p>
+                <!-- Minimap -->
+                <div class="feature-card">
+                    <h4>Real‑time Minimap</h4>
+                    <p>Built a minimap that tracks the player's position and reveals points of interest (animal locations, NPCs, key areas). The map updates dynamically as the player explores, using a camera‑based render texture and custom icon markers.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/mangrove-minimap.jpg" alt="Minimap overlay showing player and markers">
+                    </div>
+                </div>
+
+                <!-- Dialogue System (Fungus) -->
+                <div class="feature-card">
+                    <h4>Dialogue System with Fungus</h4>
+                    <p>Integrated the Fungus open‑source dialogue system to handle branching narratives, character conversations, and quest givers. Customised the Fungus flow to trigger game events (e.g., unlocking new areas, giving hints) and connected it to the game's save system.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/mangrove-dialogue1.jpg" alt="Dialogue scene with NPC">
+                    </div>
+                </div>
+
+                <!-- Thermometer Hot/Cold Mechanic -->
+                <div class="feature-card">
+                    <h4>Thermometer‑based Search Mechanic</h4>
+                    <p>Designed a "hot or cold" system to help players locate captured animals. The player receives visual and audio feedback (a thermometer‑like gauge) that gets warmer as they approach the target and colder as they move away. This mechanic encourages exploration and observation, reinforcing educational goals.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/mangrove-thermometer.jpg" alt="Thermometer gauge UI">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2026 José David Serna · <a href="https://github.com/JDSerna00">GitHub</a></p>
+    </footer>
+
+    <script src="../Assets/js/main.js"></script>
+</body>
+</html>
