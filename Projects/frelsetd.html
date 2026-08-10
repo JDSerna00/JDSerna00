@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrelseTD | José David Serna</title>
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <style>
+        .feature-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+        .feature-img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        @media (max-width: 600px) {
+            .feature-img-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .role-badge {
+            display: inline-block;
+            background: #21262d;
+            color: #58a6ff;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            border: 1px solid #30363d;
+            margin-right: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+        .role-list {
+            margin: 0.5rem 0 0.8rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FrelseTD</h1>
+        <p class="subtitle">Pixel Art Tower Defense · PC · Unity + C#</p>
+        <a href="../index.html" class="btn btn-back">← Back to Portfolio</a>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - Native Video Element -->
+        <section class="case-hero">
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                class="demo-video hero-video"
+                poster="../Assets/media/frelse-hero-poster.jpg">
+                <source src="../Assets/media/frelse-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag. 
+                <a href="../Assets/media/frelse-hero.mp4">Download the video</a> to view it.
+            </video>
+            <p class="caption">Gameplay showcase featuring tower placement, enemy waves, and the pixel art aesthetic.</p>
+        </section>
+
+        <!-- CONTEXT & MY ROLE -->
+        <section class="case-section">
+            <h2>The Context</h2>
+            <p><strong>FrelseTD</strong> is a tower defense game built with a pixel art style. The game challenges players to defend a path by strategically placing towers that attack waves of enemies. Each enemy type has unique behaviours and resistances, requiring players to adapt their strategy.</p>
+            <p>I worked on this project as the lead developer, taking full leadership of the art direction, programming, and interface design. This was a valuable opportunity to practice both creative and technical skills within a single cohesive project.</p>
+            <div class="highlight-box">
+                <strong>My Doings:</strong> Pixel art creation, tower and enemy behaviour programming, pathfinding, and interface implementation.
+            </div>
+        </section>
+
+        <!-- ART -->
+        <section class="case-section">
+            <h2>Pixel Art and Visual Design</h2>
+            <p>I created all visual assets for FrelseTD, including characters, environments, towers, enemies, and UI elements. The pixel art style was chosen to create a cohesive retro aesthetic while keeping the asset creation pipeline manageable.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Towers and Enemies</h4>
+                    <p>Designed multiple tower types and enemy variants (basic, fast, armored, boss). Each unit was created with distinct silhouettes to ensure readability during gameplay.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-art-towers.jpg" alt="Pixel art towers">
+                        <img src="../Assets/media/frelse-art-enemies.jpg" alt="Pixel art enemies">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h4>Environment and Tiles</h4>
+                    <p>Built tile-based environments with a rocky tileset. The path is clearly distinguishable from terrain to help players plan tower placements effectively. Added decorative elements (mountains, rocks, flowers) to make the world feel alive.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-art-tileset.jpg" alt="Tileset and environment">
+                        <img src="../Assets/media/frelse-art-decorations.jpg" alt="Decorative elements">
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 0.8rem; color: #8b949e; font-size: 0.9rem;">All pixel art was created using Aseprite. The colour palette was limited to 64 colours to maintain consistency across all assets.</p>
+        </section>
+
+        <!-- PROGRAMMING: TOWERS, ENEMIES, PATHING -->
+        <section class="case-section">
+            <h2>Programming: Towers, Enemies, and Pathfinding</h2>
+            <p>The core gameplay loop relies on robust enemy behaviour and responsive tower targeting. I designed and implemented the entire system from the ground up.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Tower Behaviour</h4>
+                    <p>Implemented a modular tower system where each tower type has configurable stats (damage, range, fire rate, cost)  Towers track enemies within range and fire projectiles with visual effects.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-code-towers.jpg" alt="Tower targeting in action">
+                        <img src="../Assets/media/frelse-tower-stats.jpg" alt="Tower stats UI">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h4>Enemy Behaviour and Pathing</h4>
+                    <p>Enemies follow a predefined path using navmesh navigation. Each enemy type has custom speed, health, and reward values.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-pathfinding.jpg" alt="Path following and waypoints">
+                        <img src="../Assets/media/frelse-enemy-wave.jpg" alt="Enemy wave spawning">
+                    </div>
+                </div>
+                <div class="feature-card" style="grid-column: span 2;">
+                    <h4>Code Architecture</h4>
+                    <p>The system is built using object-oriented principles with base classes for <code>Building</code>, <code>Enemy</code>, and <code>Projectile</code>. ScriptableObjects are used for data-driven configuration, allowing designers (or future me) to tweak stats without touching code.</p>
+                    <details>
+                        <summary style="cursor: pointer; color: #58a6ff; font-weight: 500;">Click to see a simplified code snippet</summary>
+                        <pre style="background: #0d1117; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-top: 0.5rem;"><code>public class Building : MonoBehaviour
+{
+    [SerializeField] int cost;
+
+    private Scanner _scanner;
+    private Weapon _weapon;
+
+    public GameObject explosionPrefab;
+    private SpriteRenderer _spriteRenderer;
+    GameManager gm = GameManager.instance;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _weapon = GetComponent<Weapon>();
+        _scanner = GetComponentInChildren<Scanner>();
+    }
+
+    private void Start()
+    {
+        InvokeRepeating(nameof(ScanEnemies), 0f, 0.1f);
+    }
+ 
+    private void Update()
+    {
+        if(_scanner.TargetFound())
+        {
+            _weapon.Shoot(_scanner.GetTarget());
+        }
+    }
+
+    private void ScanEnemies()
+    {
+        _scanner.Scan();
+    }
+}</code></pre>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERFACES -->
+        <section class="case-section">
+            <h2>Interfaces and UI Implementation</h2>
+            <p>I designed and implemented all user interfaces, ensuring that players have clear feedback and control over their defensive strategy.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Tower Placement Interface</h4>
+                    <p>Built a drag-and-drop tower placement system with visual indicators (valid/invalid placement zones). The interface shows tower stats and cost before placement, and players can select, or sell existing towers.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-ui-placement.jpg" alt="Tower placement UI">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h4>Wave and Resource Interface</h4>
+                    <p>Displayed wave number, enemy count, and player resources (gold, lives) with clear visual feedback for resource changes. Added wave start button and speed control (1x, 2x) for player convenience.</p>
+                    <div class="feature-img-grid">
+                        <img src="../Assets/media/frelse-ui-hud.jpg" alt="HUD with resources and wave info">
+                    </div>
+                </div>
+                <div class="feature-card" style="grid-column: span 2;">
+                    <h4>Design Principles Applied</h4>
+                    <ul>
+                        <li><strong>Clarity:</strong> All interactive elements are visually distinct and labelled clearly.</li>
+                        <li><strong>Feedback:</strong> Visual and audio feedback for tower placement, enemy hits, and wave progression.</li>
+                        <li><strong>Accessibility:</strong> Colour‑blind friendly palette and scalable UI elements.</li>
+                        <li><strong>Consistency:</strong> UI follows the pixel art aesthetic with custom fonts and retro‑styled buttons.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS / LEARNINGS -->
+        <section class="case-section conclusion">
+            <h2>Outcome and Learnings</h2>
+            <p>FrelseTD was a valuable project that allowed me to develop a complete game from concept to playable prototype. The project reinforced my skills in both art and programming while teaching me to balance creative and technical constraints.</p>
+            <ul>
+                <li><strong>Art Production:</strong> Gained confidence in pixel art creation and animation, learning to work efficiently with limited palettes and sprite sizes.</li>
+                <li><strong>Game Programming:</strong> Strengthened my understanding of pathfinding, AI behaviour, and modular system design.</li>
+                <li><strong>UI/UX:</strong> Learned to design interfaces that are functional, attractive, and consistent with the game's visual style.</li>
+                <li><strong>Project Management:</strong> Developed the discipline to scope features appropriately and deliver a polished product.</li>
+            </ul>
+            <div class="project-links">
+                <a href="#" class="btn btn-primary" target="_blank">Play on Itch.io (coming soon)</a>
+            </div>
+            <p style="margin-top: 1rem; color: #8b949e; font-size: 0.9rem;">The source code is currently private, but a playable demo may be available upon request.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2026 José David Serna · <a href="https://github.com/JDSerna00">GitHub</a></p>
+    </footer>
+
+    <script src="../Assets/js/main.js"></script>
+</body>
+</html>
