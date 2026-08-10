@@ -1,16 +1,29 @@
-## Hi there 👋
+# Hi, I'm José David Serna
 
-<!--
-**JDSerna00/JDSerna00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Gameplay Programmer & Game Designer** | Unity (C#) Specialist  
+📍 Medellín, Colombia | 🎓 UPB - Digital Entertainment Engineering (Exp. 2027)
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### About Me
+I'm a proactive developer who thrives on **optimization**, **clean architecture**, and **leading multidisciplinary teams**.
+---
+
+### Tech Stack
+- **Engines:** Unity (Advanced), Unreal Engine (Basic)  
+- **Languages:** C#, C++, Python  
+- **Tools:** Firebase, Shader Graph, Git, Aseprite, Jira/Trello  
+
+---
+
+### What I'm Looking For
+I'm currently seeking **internships or junior roles** (remote preferably/on-site in Medellín) starting 2026/2027. I'm eager to apply my technical leadership and problem-solving skills to a professional studio environment.
+
+---
+
+### Connect with Me
+**Portfolio:** [jdserna00.github.io/JDSerna00](https://jdserna00.github.io/JDSerna00/index.html)  
+**LinkedIn:** [linkedin.com/in/JDSerna](https://www.linkedin.com/in/jos%C3%A9-serna-88034334a/) 
+**Email:** [jdserna00@gmail.com](mailto:jdserna00@gmail.com)  
+
+---
