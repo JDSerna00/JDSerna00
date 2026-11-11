@@ -131,49 +131,37 @@ header .btn-back {
     gap: 1rem;
     flex-wrap: wrap;
 }
+/* Pixel-art mouse cursor */
 * {
-  cursor: none !important;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 12 12' shape-rendering='crispEdges'><path d='M1 1 L1 11 L4 8 L6 11 L7 10 L5 7 L10 7 Z' fill='white' stroke='black' stroke-width='1' stroke-linejoin='miter' shape-rendering='crispEdges'/></svg>") 2 2, auto !important;
+}
+a, .btn, button {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 12 12' shape-rendering='crispEdges'><path d='M3 5 V3 a1 1 0 0 1 1 0 V2 a1 1 0 0 1 1 0 V1.5 a1 1 0 0 1 1 0 V2 a1 1 0 0 1 1 0 V5 l1 -1 a1 1 0 0 1 1 1 v4 a4 4 0 0 1 -4 4 H5 a4 4 0 0 1 -4 -4 V6 a1 1 0 0 1 1 0 v1 Z' fill='white' stroke='black' stroke-width='1'/></svg>") 4 1, pointer !important;
 }
 
-#custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  
-  /* --- Sniper Ring --- */
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
-  background: transparent;
-  
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+/* CV download button */
+.btn-cv {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 22px;
+    background: #0b6b5f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
-
-#custom-cursor::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 3px;
-  height: 3px;
-  background: #ff3b3b;
-  border-radius: 50%;
-  box-shadow: 0 0 6px rgba(255, 59, 59, 0.6);
+.btn-cv:hover {
+    background: #095a50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(11, 107, 95, 0.28);
 }
-
-@media (pointer: coarse) {
-  #custom-cursor {
-    display: none !important;
-  }
-  * {
-    cursor: auto !important; /* Restore default cursor for touch users */
-  }
+.btn-cv:active {
+    transform: translateY(0);
+}
+.btn-cv:focus-visible {
+    outline: 3px solid #0b6b5f;
+    outline-offset: 3px;
 }
