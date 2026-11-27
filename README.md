@@ -6,18 +6,18 @@
 ---
 
 ### About Me
-I'm a proactive developer who thrives on **optimization**, **clean architecture**, and **leading multidisciplinary teams**.
+I'm a proactive developer, focused mostly on **optimization**, **clean architecture**, and proficient on **leading multidisciplinary teams**.
 ---
 
 ### Tech Stack
 - **Engines:** Unity (Advanced), Unreal Engine (Basic)  
-- **Languages:** C#, C++, Python  
+- **Languages:** C#, C++, Python, Lua  
 - **Tools:** Firebase, Shader Graph, Git, Aseprite, Jira/Trello  
 
 ---
 
 ### What I'm Looking For
-I'm currently seeking **internships or junior roles** (remote preferably/on-site in Medellín) starting 2026/2027. I'm eager to apply my technical leadership and problem-solving skills to a professional studio environment.
+I'm currently seeking **junior roles** (remote preferably/on-site in Medellín) starting 2026/2027. I'm eager to apply my technical leadership and problem-solving skills to a professional studio environment.
 
 ---
 
